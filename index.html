@@ -68,7 +68,10 @@
 		<script>
 			var interval = setInterval(function(){
 				var audio = document.getElementById('bgm');
-				audio.play();
+				try {
+					audio.play();
+				} catch (err) {
+				}
 				if (!audio.paused)
 					clearInterval(interval);
 			}, 0.5);
@@ -90,6 +93,20 @@
 	<!---------->
 	<!-- Blog -->
 	<!---------->
+	<!-- Flappy Knuckles 2 Teaser Trailer -->
+	<div class="blogPostStart">
+		<div class="blogPostLeft">
+			<h1 style="width:100%;text-align:center;">Flappy Knuckles 2 Teaser Trailer</h1>
+			<h3 style="width:100%;text-align:center;">23/05/2018</h3>
+		</div>
+		<div class="blogPostRight">
+			<p>Flappy Knuckles 2! It's announced!</p>
+			<iframe width="420" height="315" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/8GGr0ou9e9k"></iframe>
+			<p>Doesn't that excite you? I wonder what the game will be like...</p>
+			<p>I'm going to have the summer off, so I'll have plenty of time to work on this. I'm making it in Unity, so hopefully it'll be more robust than Flappy Knuckles 1.</p>
+		</div>
+	</div>
+	
 	<!-- Version 1.4 -->
 	<div class="blogPostStart">
 		<div class="blogPostLeft">
