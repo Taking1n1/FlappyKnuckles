@@ -45,19 +45,35 @@
 	.button:hover {
 		cursor:url("hover.png"), auto;
 	}
+	audio {
+		margin-top:5px;
+		width: 100%;
+		background-color:red;
+	}
   </style>
   
   <body>
-	<!-- Audio -->
-	<audio autoplay>
-	  <source src="knuckles.ogg" type="audio/ogg">
-	</audio>
 
 	<!-- Legal business -->
 	<div style="position:absolute;top:0;left:0;font-size:12px;margin:5px;">Credit for Sonic assets goes to</br>SEGA and Sonic Team</div>
 
 	<!-- Thanks SiIva -->
-	<div style="position:absolute;top:0;left:85vw;max-width:15vw;font-size:12px;margin:5px;text-align:right;">You can thank <a href="https://www.youtube.com/watch?v=beNfj2tlQ1o">SiIvagunner</a> for the page music.</div>
+	<div style="position:absolute;top:0;left:85vw;max-width:15vw;font-size:12px;margin:5px;text-align:right;">
+		You can thank <a href="https://www.youtube.com/watch?v=beNfj2tlQ1o">SiIvagunner</a> for the page music.
+		
+		<!-- Audio -->
+		<audio id="bgm" loop controls>
+		  <source src="./knuckles.ogg" type="audio/ogg">
+		</audio>
+		<script>
+			var interval = setInterval(function(){
+				var audio = document.getElementById('bgm');
+				audio.play();
+				if (!audio.paused)
+					clearInterval(interval);
+			}, 0.5);
+		</script>
+	</div>
 	
 	<!-- Logo -->
 	<div style="width:100%;text-align:center;">
@@ -255,4 +271,4 @@
 	</div>
 	
   </body>
-</htm>
+</html>
